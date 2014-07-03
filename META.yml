@@ -4,6 +4,7 @@ author:
   - 'Dave Rolsky <autarch@urth.org>'
   - 'Olaf Alders <olaf@wundercounter.com>'
 build_requires:
+  Data::Printer: '0'
   File::Temp: '0'
   List::AllUtils: '0'
   List::Util: '0'
@@ -58,7 +59,7 @@ requires:
 resources:
   bugtracker: https://github.com/maxmind/MaxMind-DB-Writer-perl/issues
   repository: git://github.com/maxmind/MaxMind-DB-Writer-perl.git
-version: '0.050004'
+version: '0.050005'
 x_authority: cpan:TJMATHER
 x_contributors:
   - 'Gregory Oschwald <goschwald@maxmind.com>'

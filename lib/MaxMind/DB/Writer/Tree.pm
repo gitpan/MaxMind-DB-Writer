@@ -1,5 +1,5 @@
 package MaxMind::DB::Writer::Tree;
-$MaxMind::DB::Writer::Tree::VERSION = '0.050004';
+$MaxMind::DB::Writer::Tree::VERSION = '0.050005';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -262,7 +262,7 @@ MaxMind::DB::Writer::Tree - Tree representing a MaxMind DB database in memory - 
 
 =head1 VERSION
 
-version 0.050004
+version 0.050005
 
 =head1 SYNOPSIS
 

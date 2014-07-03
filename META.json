@@ -66,6 +66,7 @@
       },
       "test" : {
          "requires" : {
+            "Data::Printer" : "0",
             "File::Temp" : "0",
             "List::AllUtils" : "0",
             "List::Util" : "0",
@@ -93,7 +94,7 @@
          "web" : "https://github.com/maxmind/MaxMind-DB-Writer-perl"
       }
    },
-   "version" : "0.050004",
+   "version" : "0.050005",
    "x_authority" : "cpan:TJMATHER",
    "x_contributors" : [
       "Gregory Oschwald <goschwald@maxmind.com>",

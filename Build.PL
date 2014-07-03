@@ -94,6 +94,7 @@ __DATA__
                                'Test::MaxMind::DB::Common::Data' => '0',
                                'File::Temp' => '0',
                                'autodie' => '0',
+                               'Data::Printer' => '0',
                                'lib' => '0'
                              },
           'script_files' => [],
@@ -141,6 +142,6 @@ __DATA__
           'configure_requires' => {
                                     'Module::Build' => '0.3601'
                                   },
-          'dist_version' => '0.050004'
+          'dist_version' => '0.050005'
         };
 

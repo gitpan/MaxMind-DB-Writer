@@ -1,5 +1,5 @@
 package MaxMind::DB::Writer::Tree;
-$MaxMind::DB::Writer::Tree::VERSION = '0.050005';
+$MaxMind::DB::Writer::Tree::VERSION = '0.050006';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -262,7 +262,7 @@ MaxMind::DB::Writer::Tree - Tree representing a MaxMind DB database in memory - 
 
 =head1 VERSION
 
-version 0.050005
+version 0.050006
 
 =head1 SYNOPSIS
 
@@ -493,11 +493,15 @@ The valid types are:
 
 =item *
 
-Dave Rolsky <autarch@urth.org>
+Olaf Alders <oalders@maxmind.com>
 
 =item *
 
-Olaf Alders <olaf@wundercounter.com>
+Greg Oschwald <goschwald@maxmind.com>
+
+=item *
+
+Dave Rolsky <drolsky@maxmind.com>
 
 =back
 

@@ -7,7 +7,7 @@ MANIFEST
 MANIFEST.SKIP
 META.json
 META.yml
-README
+README.md
 bench/memory-use
 c/perl_math_int128.c
 c/perl_math_int128.h

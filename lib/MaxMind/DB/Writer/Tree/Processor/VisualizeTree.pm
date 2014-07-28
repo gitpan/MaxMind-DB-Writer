@@ -1,5 +1,5 @@
 package MaxMind::DB::Writer::Tree::Processor::VisualizeTree;
-$MaxMind::DB::Writer::Tree::Processor::VisualizeTree::VERSION = '0.050005';
+$MaxMind::DB::Writer::Tree::Processor::VisualizeTree::VERSION = '0.050006';
 use strict;
 use warnings;
 

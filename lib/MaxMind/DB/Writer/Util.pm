@@ -1,5 +1,5 @@
 package MaxMind::DB::Writer::Util;
-$MaxMind::DB::Writer::Util::VERSION = '0.050005';
+$MaxMind::DB::Writer::Util::VERSION = '0.050006';
 use strict;
 use warnings;
 

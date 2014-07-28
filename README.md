@@ -1,27 +1,12 @@
-package MaxMind::DB::Writer;
-$MaxMind::DB::Writer::VERSION = '0.050006';
-use strict;
-use warnings;
-
-1;
-
-# ABSTRACT: Create MaxMind DB database files
-
-__END__
-
-=pod
-
-=encoding UTF-8
-
-=head1 NAME
+# NAME
 
 MaxMind::DB::Writer - Create MaxMind DB database files
 
-=head1 VERSION
+# VERSION
 
 version 0.050006
 
-=head1 SYNOPSIS
+# SYNOPSIS
 
     use MaxMind::DB::Writer::Tree;
     use Net::Works::Network;
@@ -49,51 +34,37 @@ version 0.050006
     open my $fh, '>:raw', '/path/to/my-ip-data.mmdb';
     $tree->write_tree($fh);
 
-=head1 DESCRIPTION
+# DESCRIPTION
 
-This distribution contains the code necessary to write L<MaxMind DB database
-files|http://maxmind.github.io/MaxMind-DB/>. See L<MaxMind::DB::Writer::Tree>
+This distribution contains the code necessary to write [MaxMind DB database
+files](http://maxmind.github.io/MaxMind-DB/). See [MaxMind::DB::Writer::Tree](https://metacpan.org/pod/MaxMind::DB::Writer::Tree)
 for API docs.
 
-=head1 WINDOWS SUPPORT
+# WINDOWS SUPPORT
 
 This distribution does not currently work on Windows. Reasonable patches for
 Windows support are very welcome. You will probably need to start by making
-L<Math::Int128> work on Windows, since we use that module's C API for dealing
+[Math::Int128](https://metacpan.org/pod/Math::Int128) work on Windows, since we use that module's C API for dealing
 with 128-bit integers to represent IPv6 addresses numerically.
 
-=head1 SUPPORT
+# SUPPORT
 
 Please report all issues with this code using the GitHub issue tracker at
-L<https://github.com/maxmind/MaxMind-DB-Writer-perl/issues>.
+[https://github.com/maxmind/MaxMind-DB-Writer-perl/issues](https://github.com/maxmind/MaxMind-DB-Writer-perl/issues).
 
 We welcome patches as pull requests against our GitHub repository at
-L<https://github.com/maxmind/MaxMind-DB-Writer-perl>.
+[https://github.com/maxmind/MaxMind-DB-Writer-perl](https://github.com/maxmind/MaxMind-DB-Writer-perl).
 
-=head1 AUTHORS
+# AUTHORS
 
-=over 4
+- Olaf Alders <oalders@maxmind.com>
+- Greg Oschwald <goschwald@maxmind.com>
+- Dave Rolsky <drolsky@maxmind.com>
 
-=item *
-
-Olaf Alders <oalders@maxmind.com>
-
-=item *
-
-Greg Oschwald <goschwald@maxmind.com>
-
-=item *
-
-Dave Rolsky <drolsky@maxmind.com>
-
-=back
-
-=head1 COPYRIGHT AND LICENSE
+# COPYRIGHT AND LICENSE
 
 This software is Copyright (c) 2014 by MaxMind, Inc..
 
 This is free software, licensed under:
 
-  The Artistic License 2.0 (GPL Compatible)
-
-=cut
+    The Artistic License 2.0 (GPL Compatible)

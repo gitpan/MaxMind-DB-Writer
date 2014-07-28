@@ -6,6 +6,11 @@ use lib 'inc';
 use Config::AutoConf;
 use Module::Build;
 
+if ( $^O =~ /Win32/ ) {
+    die 'This distribution does not work on Windows platforms.'
+        . " See the documentation for details.\n";
+}
+
 my $mb = Module::Build->new(
     _mb_args(),
     c_source => 'c',
@@ -105,8 +110,9 @@ __DATA__
                               },
           'dist_name' => 'MaxMind-DB-Writer',
           'dist_author' => [
-                             'Dave Rolsky <autarch@urth.org>',
-                             'Olaf Alders <olaf@wundercounter.com>'
+                             'Olaf Alders <oalders@maxmind.com>',
+                             'Greg Oschwald <goschwald@maxmind.com>',
+                             'Dave Rolsky <drolsky@maxmind.com>'
                            ],
           'module_name' => 'MaxMind::DB::Writer',
           'requires' => {
@@ -142,6 +148,6 @@ __DATA__
           'configure_requires' => {
                                     'Module::Build' => '0.3601'
                                   },
-          'dist_version' => '0.050005'
+          'dist_version' => '0.050006'
         };
 

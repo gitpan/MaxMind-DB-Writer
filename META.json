@@ -1,8 +1,9 @@
 {
    "abstract" : "Create MaxMind DB database files",
    "author" : [
-      "Dave Rolsky <autarch@urth.org>",
-      "Olaf Alders <olaf@wundercounter.com>"
+      "Olaf Alders <oalders@maxmind.com>",
+      "Greg Oschwald <goschwald@maxmind.com>",
+      "Dave Rolsky <drolsky@maxmind.com>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Dist::Zilla version 5.019, CPAN::Meta::Converter version 2.131560",
@@ -94,9 +95,10 @@
          "web" : "https://github.com/maxmind/MaxMind-DB-Writer-perl"
       }
    },
-   "version" : "0.050005",
+   "version" : "0.050006",
    "x_authority" : "cpan:TJMATHER",
    "x_contributors" : [
+      "Dave Rolsky <autarch@urth.org>",
       "Gregory Oschwald <goschwald@maxmind.com>",
       "Olaf Alders <olaf@wundersolutions.com>",
       "tjmather <tjmather@maxmind.com>"

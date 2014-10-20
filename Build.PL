@@ -106,7 +106,7 @@ __DATA__
           'recursive_test_files' => 1,
           'license' => 'artistic_2',
           'build_requires' => {
-                                'Module::Build' => '0.3601'
+                                'Module::Build' => '0.28'
                               },
           'dist_name' => 'MaxMind-DB-Writer',
           'dist_author' => [
@@ -118,13 +118,13 @@ __DATA__
           'requires' => {
                           'bytes' => '0',
                           'XSLoader' => '0',
-                          'Net::Works::Network' => '0.16',
+                          'Net::Works::Network' => '0',
                           'IO::Handle' => '0',
                           'MaxMind::DB::Metadata' => '0',
                           'Sereal::Encoder' => '0',
                           'Moose::Util::TypeConstraints' => '0',
                           'Encode' => '0',
-                          'Net::Works' => '0.16',
+                          'Net::Works' => '0.20',
                           'Data::Dumper::Concise' => '0',
                           'Data::IEEE754' => '0',
                           'MaxMind::DB::Common' => '0.031003',
@@ -146,8 +146,8 @@ __DATA__
                         },
           'recommends' => {},
           'configure_requires' => {
-                                    'Module::Build' => '0.3601'
+                                    'Module::Build' => '0.28'
                                   },
-          'dist_version' => '0.050006'
+          'dist_version' => '0.050007'
         };
 

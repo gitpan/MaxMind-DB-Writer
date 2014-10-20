@@ -1,5 +1,5 @@
 package MaxMind::DB::Writer;
-$MaxMind::DB::Writer::VERSION = '0.050006';
+$MaxMind::DB::Writer::VERSION = '0.050007';
 use strict;
 use warnings;
 
@@ -19,7 +19,7 @@ MaxMind::DB::Writer - Create MaxMind DB database files
 
 =head1 VERSION
 
-version 0.050006
+version 0.050007
 
 =head1 SYNOPSIS
 

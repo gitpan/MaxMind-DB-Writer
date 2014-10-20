@@ -1,5 +1,5 @@
 package MaxMind::DB::Writer::Serializer;
-$MaxMind::DB::Writer::Serializer::VERSION = '0.050006';
+$MaxMind::DB::Writer::Serializer::VERSION = '0.050007';
 use strict;
 use warnings;
 use namespace::autoclean;

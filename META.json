@@ -6,7 +6,7 @@
       "Dave Rolsky <drolsky@maxmind.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.019, CPAN::Meta::Converter version 2.131560",
+   "generated_by" : "Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.142690",
    "license" : [
       "artistic_2"
    ],
@@ -18,12 +18,12 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "Module::Build" : "0.3601"
+            "Module::Build" : "0.28"
          }
       },
       "configure" : {
          "requires" : {
-            "Module::Build" : "0.3601"
+            "Module::Build" : "0.28"
          }
       },
       "develop" : {
@@ -53,8 +53,8 @@
             "Moose" : "0",
             "Moose::Util::TypeConstraints" : "0",
             "MooseX::StrictConstructor" : "0",
-            "Net::Works" : "0.16",
-            "Net::Works::Network" : "0.16",
+            "Net::Works" : "0.20",
+            "Net::Works::Network" : "0",
             "Sereal::Encoder" : "0",
             "Test::Deep::NoTest" : "0",
             "XSLoader" : "0",
@@ -95,11 +95,12 @@
          "web" : "https://github.com/maxmind/MaxMind-DB-Writer-perl"
       }
    },
-   "version" : "0.050006",
+   "version" : "0.050007",
    "x_authority" : "cpan:TJMATHER",
    "x_contributors" : [
       "Dave Rolsky <autarch@urth.org>",
       "Gregory Oschwald <goschwald@maxmind.com>",
+      "Gregory Oschwald <oschwald@gmail.com>",
       "Olaf Alders <olaf@wundersolutions.com>",
       "tjmather <tjmather@maxmind.com>"
    ]

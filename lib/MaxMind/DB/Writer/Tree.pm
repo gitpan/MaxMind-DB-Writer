@@ -1,5 +1,5 @@
 package MaxMind::DB::Writer::Tree;
-$MaxMind::DB::Writer::Tree::VERSION = '0.050006';
+$MaxMind::DB::Writer::Tree::VERSION = '0.050007';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -13,7 +13,7 @@ use MaxMind::DB::Common 0.031003 qw(
 use MaxMind::DB::Metadata;
 use MaxMind::DB::Writer::Serializer;
 use MaxMind::DB::Writer::Util qw( key_for_data );
-use Net::Works 0.16;
+use Net::Works 0.20;
 
 use Moose;
 use Moose::Util::TypeConstraints;
@@ -262,7 +262,7 @@ MaxMind::DB::Writer::Tree - Tree representing a MaxMind DB database in memory - 
 
 =head1 VERSION
 
-version 0.050006
+version 0.050007
 
 =head1 SYNOPSIS
 
@@ -411,6 +411,57 @@ L<Math::UInt128|Math::Int128> objects.
 
 Given a filehandle, this method writes the contents of the tree as a MaxMind
 DB database to that filehandle.
+
+=head2 $tree->iterate($object)
+
+This method iterates over the tree by calling methods on the passed
+object. The object must have at least one of the following three methods:
+C<process_empty_record>, C<process_node_record>, C<process_data_record>.
+
+The iteration is done in depth-first order, which means that it visits each
+network in order.
+
+Each method on the object is called with the following position parameters:
+
+=over 4
+
+=item
+
+The node number as a 64-bit number.
+
+=item
+
+A boolean indicating whether or not this is the right or left record for the
+node. True for right, false for left.
+
+=item
+
+The first IP number in the node's network as a 128-bit number.
+
+=item
+
+The prefix length for the node's network.
+
+=item
+
+The first IP number in the record's network as a 128-bit number.
+
+=item
+
+The prefix length for the record's network.
+
+=back
+
+If the record is a data record, the final argument will be the Perl data
+structure associated with the record.
+
+The record's network is what matches with a given data structure for data
+records.
+
+For node (and alias) records, the final argument will be the number of the
+node that this record points to.
+
+For empty records, there are no additional arguments.
 
 =head1 DATA TYPES
 

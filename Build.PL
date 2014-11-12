@@ -28,7 +28,7 @@ $mb->create_build_script();
 sub _mb_args {
 
     # This is a funky way of allowing this code to run stand-alone and as a
-    # template to be processes by Dist::Zilla::Plugin::ModuleBuild::Custom
+    # template to be processed by Dist::Zilla::Plugin::ModuleBuild::Custom
     my $data = do { local $/; <DATA> };
 
     if ( $data !~ /^\#/ ) {
@@ -87,24 +87,29 @@ __DATA__
  {
           'dist_abstract' => 'Create MaxMind DB database files',
           'test_requires' => {
-                               'Scalar::Util' => '0',
                                'Test::Requires' => '0',
-                               'Net::Works::Address' => '0',
-                               'List::AllUtils' => '0',
+                               'Scalar::Util' => '0',
+                               'IO::Handle' => '0',
+                               'File::Spec' => '0',
                                'Test::Fatal' => '0',
-                               'utf8' => '0',
-                               'Test::Bits' => '0',
+                               'IPC::Open3' => '0',
                                'List::Util' => '0',
-                               'Test::More' => '0.88',
-                               'Test::MaxMind::DB::Common::Data' => '0',
-                               'File::Temp' => '0',
-                               'autodie' => '0',
                                'Data::Printer' => '0',
-                               'lib' => '0'
+                               'autodie' => '0',
+                               'lib' => '0',
+                               'Net::Works::Address' => '0',
+                               'ExtUtils::MakeMaker' => '0',
+                               'List::AllUtils' => '0',
+                               'utf8' => '0',
+                               'perl' => '5.010',
+                               'Test::More' => '0.88',
+                               'Test::Bits' => '0',
+                               'Test::MaxMind::DB::Common::Data' => '0',
+                               'File::Temp' => '0'
                              },
           'script_files' => [],
           'recursive_test_files' => 1,
-          'license' => 'artistic_2',
+          'license' => 'perl',
           'build_requires' => {
                                 'Module::Build' => '0.28'
                               },
@@ -139,6 +144,7 @@ __DATA__
                           'constant' => '0',
                           'Exporter' => '0',
                           'Carp' => '0',
+                          'perl' => '5.010',
                           'strict' => '0',
                           'Math::Int128' => '0.06',
                           'Test::Deep::NoTest' => '0',
@@ -146,8 +152,24 @@ __DATA__
                         },
           'recommends' => {},
           'configure_requires' => {
-                                    'Module::Build' => '0.28'
+                                    'Scalar::Util' => '0',
+                                    'Capture::Tiny' => '0',
+                                    'File::Spec' => '0',
+                                    'IO::Handle' => '0',
+                                    'lib' => '0',
+                                    'Module::Build' => '0.28',
+                                    'ExtUtils::CBuilder' => '0',
+                                    'warnings' => '0',
+                                    'base' => '0',
+                                    'Config::AutoConf' => '0',
+                                    'Exporter' => '0',
+                                    'Carp' => '0',
+                                    'perl' => '5.008002',
+                                    'strict' => '0',
+                                    'PerlIO' => '0',
+                                    'File::Temp' => '0',
+                                    'File::Basename' => '0'
                                   },
-          'dist_version' => '0.050007'
+          'dist_version' => '0.060000'
         };
 

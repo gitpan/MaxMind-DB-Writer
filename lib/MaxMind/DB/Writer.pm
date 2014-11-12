@@ -1,5 +1,7 @@
 package MaxMind::DB::Writer;
-$MaxMind::DB::Writer::VERSION = '0.050007';
+# git description: v0.050007-12-gc68712d
+$MaxMind::DB::Writer::VERSION = '0.060000';
+
 use strict;
 use warnings;
 
@@ -11,27 +13,32 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 MaxMind::DB::Writer - Create MaxMind DB database files
 
 =head1 VERSION
 
-version 0.050007
+version 0.060000
 
 =head1 SYNOPSIS
 
     use MaxMind::DB::Writer::Tree;
     use Net::Works::Network;
 
+    my %types = (
+        color => 'utf8_string',
+        dogs  => [ 'array', 'utf8_string' ],
+        size  => 'uint16',
+    );
+
     my $tree = MaxMind::DB::Writer::Tree->new(
-        ip_version    => 6,
-        record_size   => 24,
-        database_type => 'My-IP-Data',
-        languages     => ['en'],
-        description   => { en => 'My database of IP data' },
+        ip_version            => 6,
+        record_size           => 24,
+        database_type         => 'My-IP-Data',
+        languages             => ['en'],
+        description           => { en => 'My database of IP data' },
+        map_key_type_callback => sub { $types{ $_[0] } },
     );
 
     my $network
@@ -46,7 +53,7 @@ version 0.050007
         },
     );
 
-    open my $fh, '>:raw', '/path/to/my-ip-data.mmdb';
+    open my $fh, '>:bytes', '/path/to/my-ip-data.mmdb';
     $tree->write_tree($fh);
 
 =head1 DESCRIPTION
@@ -88,12 +95,17 @@ Dave Rolsky <drolsky@maxmind.com>
 
 =back
 
+=head1 CONTRIBUTOR
+
+=for stopwords tjmather
+
+tjmather <tjmather@maxmind.com>
+
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2014 by MaxMind, Inc..
+This software is copyright (c) 2014 by MaxMind, Inc..
 
-This is free software, licensed under:
-
-  The Artistic License 2.0 (GPL Compatible)
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut

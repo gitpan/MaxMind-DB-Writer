@@ -1,5 +1,5 @@
 package MaxMind::DB::Writer::Tree;
-$MaxMind::DB::Writer::Tree::VERSION = '0.050007';
+$MaxMind::DB::Writer::Tree::VERSION = '0.060000';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -83,10 +83,10 @@ has _root_data_type => (
 );
 
 has _map_key_type_callback => (
-    is        => 'ro',
-    isa       => 'CodeRef',
-    init_arg  => 'map_key_type_callback',
-    predicate => '_has_map_key_type_callback',
+    is       => 'ro',
+    isa      => 'CodeRef',
+    init_arg => 'map_key_type_callback',
+    required => 1,
 );
 
 has _database_type => (
@@ -158,11 +158,7 @@ sub _build_serializer {
     my $self = shift;
 
     return MaxMind::DB::Writer::Serializer->new(
-        (
-            $self->_has_map_key_type_callback()
-            ? ( map_key_type_callback => $self->_map_key_type_callback() )
-            : ()
-        ),
+        map_key_type_callback => $self->_map_key_type_callback(),
     );
 }
 
@@ -254,15 +250,13 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 MaxMind::DB::Writer::Tree - Tree representing a MaxMind DB database in memory - then write it to a file
 
 =head1 VERSION
 
-version 0.050007
+version 0.060000
 
 =head1 SYNOPSIS
 
@@ -558,10 +552,9 @@ Dave Rolsky <drolsky@maxmind.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2014 by MaxMind, Inc..
+This software is copyright (c) 2014 by MaxMind, Inc..
 
-This is free software, licensed under:
-
-  The Artistic License 2.0 (GPL Compatible)
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
